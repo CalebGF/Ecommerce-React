@@ -29,7 +29,6 @@ export const removeProduct = (event, count, setCount, dataId, cartProducts, setC
  */
 export const makeOrder = (cartProducts, orders,  setOrders, setCartProducts, setCount, closeCheckoutAside) => {
     const order = {
-        id: orders? length + 1 : 1,
         date: new Date(),
         products: cartProducts,
         total: totalPrice(cartProducts)
@@ -39,29 +38,3 @@ export const makeOrder = (cartProducts, orders,  setOrders, setCartProducts, set
     setCount(0);
     closeCheckoutAside();
 }
-
-
-
-
-/* 
-Implement later
-
-import { useEffect } from "react";
-
-function PlatziApi() {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('https://api.escuelajs.co/api/v1/products')
-        .then(res => res.json())
-        .then(json => setProducts(json))
-    }, []);
-    
-    return products;
-}
-
-export default PlatziApi; 
-
-
-*/
-

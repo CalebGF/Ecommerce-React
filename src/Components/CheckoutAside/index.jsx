@@ -20,6 +20,7 @@ function ProductDetail() {
 
     return (
         <aside className={` ${ checkoutAsideActive ? 'flex' : 'hidden' } product-detail flex flex-col fixed right-0 border border-black rounded-lg bg-white`}>
+            {/* Aside Header - Title and Close button */}
             <div className="flex justify-between items-center p-6">
                 <h2 className="font-medium text-xl">My Order</h2>
                 <button 
@@ -37,6 +38,7 @@ function ProductDetail() {
                 )
                 }
             </div>
+            {/* Aside Footer - Total and Checkout button */}
             <div className="px-6 mb-6">
                 <p className="flex justify-between items-center mb-2">
                     <span className="font-light">Total:</span>
