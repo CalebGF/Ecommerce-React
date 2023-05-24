@@ -4,7 +4,6 @@ import Layout from "../../Components/Layout";
 import OrderCard from "../../Components/OrderCard";
 import { ShoppingCartContext } from '../../Context';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import {totalPrice} from '../../Utils'
 
 function MyOrder() {
   // Context  
@@ -14,13 +13,14 @@ function MyOrder() {
 
   // Order is charged according to the id in the URL or the last order
   let order = {};
+
   if(id != "last"){
     id = parseInt(id);
-    console.log("id : " + id);
     order = orders[id];
   } else {
     order = orders.slice(-1)[0];
   }
+
   return (
     <Layout>
       {/* Order Header */}

@@ -13,6 +13,8 @@ import Navbar from '../../Components/Navbar'
 const AppRoutes = () => {
   const routes = useRoutes([
     { path: '/', element: <Home />},
+    { path: '/electronics', element: <Home />},
+    { path: '/clothes', element: <Home />},
     { path: '/my-account', element: <MyAccount />},
     { path: '/my-orders/:id', element: <MyOrder />},
     { path: '/my-orders', element: <MyOrders />},

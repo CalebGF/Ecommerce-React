@@ -11,6 +11,17 @@ export const totalPrice = (cartProducts) => {
 }
 
 // Function to remove this product from the shopping cart
+/**
+ * @param {event} event
+ * @param {number} count
+ * @param {function} setCount
+ * @param {number} dataId
+ * @param {array} cartProducts
+ * @param {function} setCartProducts
+ * @description Removes a product from the shopping cart
+ * @returns {void}
+ *
+*/
 export const removeProduct = (event, count, setCount, dataId, cartProducts, setCartProducts) => {
     event.stopPropagation()
     setCount(count - 1)
@@ -37,4 +48,15 @@ export const makeOrder = (cartProducts, orders,  setOrders, setCartProducts, set
     setCartProducts([]);
     setCount(0);
     closeCheckoutAside();
+}
+
+
+/**
+ * @description Input search filter
+ */
+export const filterProducts = (products, inputSearch) => {
+    const filteredProducts = products.filter( product => 
+        product.title.toLowerCase().includes(inputSearch.toLowerCase())
+    )
+    return filteredProducts;
 }

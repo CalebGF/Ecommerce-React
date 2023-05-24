@@ -6,7 +6,7 @@ import { ShoppingCartContext } from '../../Context';
 
 function Card (props) {
     // Product Details
-    const {title, image, category, price }  = props.product;
+    const {title, images, category, price }  = props.product;
 
     // Shopping Cart - Counter - Open - Set Product 
     const { count, setCount, openProductDetail, closeProductDetail, setProduct, cartProducts, setCartProducts, openCheckoutAside, closeCheckoutAside } = useContext(ShoppingCartContext)
@@ -52,8 +52,8 @@ function Card (props) {
             onClick={() => showProduct()}
         >
             <figure className='relative mb-2 w-full h-4/5'>
-                <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5'>{ category }</span>
-                <img className='w-full h-full object-cover rounded-lg' src={ image } alt={category} />
+                <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5'>{ category.name }</span>
+                <img className='w-full h-full object-cover rounded-lg' src={ images[0] } alt={category.name} />
                 <button>
                     {renderIcon()}
                 </button>

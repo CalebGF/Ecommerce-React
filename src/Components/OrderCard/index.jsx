@@ -6,7 +6,7 @@ import { removeProduct } from '../../Utils'
 
 function OrderCard(props) {
     
-    const { title, image, price } = props.data;
+    const { title, images, price } = props.data;
     const { cartProducts, setCartProducts, count, setCount, productDetailActive } = useContext(ShoppingCartContext)
 
     return (
@@ -14,7 +14,7 @@ function OrderCard(props) {
             <div className="flex items-center gap-2">
                 <figure className="w-20 h-20">
                     <img 
-                        src={image} 
+                        src={images[0]} 
                         alt={title} 
                         className="w-full h-full rounded-lg object-cover "
                     />
