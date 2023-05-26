@@ -1,6 +1,10 @@
+import Layout from "../../Components/Layout";
+
 function NotFound() {
     return (
-      <h1>Homee </h1>
+      <Layout>
+        <h1>Not Found </h1>
+      </Layout>
     );
   }
   
