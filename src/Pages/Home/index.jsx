@@ -53,7 +53,9 @@ function Index() {
         placeholder="Search products"
       />
 
-      {<div className="grid gap-4 grid-cols-3 lg:grid-cols-4 w-full max-w-screen-lg">
+      {<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+                       w-4/5  max-w-screen-lg gap-4
+                       ">
         {renderProducts()}
       </div>}
 

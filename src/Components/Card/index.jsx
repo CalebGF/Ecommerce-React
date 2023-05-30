@@ -27,8 +27,6 @@ function Card (props) {
         openCheckoutAside()
     }
 
-    
-
     // Function to show icon in case of product is already in the shopping cart
     const renderIcon = () => {
         const productInCart = cartProducts.find( product => product.id === props.product.id)
@@ -48,7 +46,7 @@ function Card (props) {
 
 
     return (
-        <div className='bg-white cursor-pointer w-56 h-60'
+        <div className='bg-white cursor-pointer w-72 h-72 md:w-56 md:h-60 m-auto'
             onClick={() => showProduct()}
         >
             <figure className='relative mb-2 w-full h-4/5'>
